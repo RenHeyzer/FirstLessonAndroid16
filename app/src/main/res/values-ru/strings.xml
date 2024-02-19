@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Первый урок группы Android 16</string>
+    <string name="search_hint">Поиск</string>
+    <string name="sunset_image_content_description">Изображения заката</string>
+    <string name="hello_text">Здравсвуйте</string>
+    <string name="tv_result_text">80%</string>
+    <string name="category_mixed">Категория: Смешанная</string>
+</resources>

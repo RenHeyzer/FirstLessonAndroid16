@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Result"
+        android:textAppearance="@style/TextAppearanceOverlay.Title"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_check_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Icon check mark"
+        android:src="@drawable/ic_check_mark"
+        app:tint="?attr/colorTertiary" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_check_mark"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="70dp"
+        style="@style/Widget.Material3.CardView.Elevated">
+
+        <RelativeLayout
+            android:id="@+id/results_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:text="@string/category_mixed"
+                android:textAppearance="@style/TextAppearanceOverlay.Title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_category"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="40dp"
+                android:text="Difficulty:"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Secondary" />
+
+            <TextView
+                android:id="@+id/tv_difficulty_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_difficulty"
+                android:layout_alignStart="@id/tv_difficulty"
+                android:layout_alignEnd="@id/tv_difficulty"
+                android:layout_marginTop="4dp"
+                android:text="All"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Primary" />
+
+            <TextView
+                android:id="@+id/tv_correct_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Correct answers:"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Secondary" />
+
+            <TextView
+                android:id="@+id/tv_correct_answers_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_correct_answers"
+                android:layout_alignStart="@id/tv_correct_answers"
+                android:layout_alignEnd="@id/tv_correct_answers"
+                android:layout_marginTop="4dp"
+                android:text="8/10"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Primary" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_category"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="26dp"
+                android:text="Result:"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Secondary" />
+
+            <TextView
+                android:id="@+id/tv_result_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_result"
+                android:layout_alignStart="@id/tv_result"
+                android:layout_alignEnd="@id/tv_result"
+                android:layout_marginTop="4dp"
+                android:text="@string/tv_result_text"
+                android:textAppearance="@style/TextAppearanceOverlay.Small.Primary" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_below="@id/tv_correct_answers_value" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <FrameLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/card_results"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearanceOverlay.Button.Medium"
+            android:textColor="?attr/colorOnSurface"
+            style="@style/Widget.MaterialButton.CustomButton"
+            android:text="Finish" />
+
+    </FrameLayout>
+
+</RelativeLayout>
